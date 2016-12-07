@@ -22,38 +22,41 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <div class="logo">
-            <img src="img/no_word_logo.png" width="75%">
-            <h3>MCHL Institute of Business and Technology</h3>
-            <p class="subtitle">Edit this subtitle</p>
-          </div>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#"><i class="fa fa-graduation-cap"></i> Students</a></li>
-            <li><a href="#"><i class="fa fa-money"></i> Payments</a></li>
-            <li><a href="#"><i class="fa fa-align-left"></i> Expenses</a></li>
-            <li><a href="#"><i class="fa fa-briefcase"></i> Employees</a></li>
-            <li><a href="#"><i class="fa fa-file-pdf-o"></i> Reports</a></li>
-            <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-md-10">
-          <div class="top_nav">
-            <div class="row">
-              <div class="col-sm-3"></div>
-              <div class="col-sm-9 user_name text-right">Francis Karl Casao</div>
-            </div>
-          </div>
-        </div>
-      </div>   
-    </div> 
+    <nav id="drawer">
+      <div class="logo">
+        <img src="img/no_word_logo.png" width="75%">
+        <h3>MCHL Institute of Business and Technology</h3>
+        <p class="subtitle">Edit this subtitle</p>
+      </div>
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#"><i class="fa fa-graduation-cap"></i> Students</a></li>
+        <li><a href="#"><i class="fa fa-money"></i> Payments</a></li>
+        <li><a href="#"><i class="fa fa-align-left"></i> Expenses</a></li>
+        <li><a href="#"><i class="fa fa-briefcase"></i> Employees</a></li>
+        <li><a href="#"><i class="fa fa-file-pdf-o"></i> Reports</a></li>
+        <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="top_nav">
+        <div><i class="fa fa-bars fa-5x" id="menu"></i></div>
+        <div class="text-right">Francis Karl Casao</div>
+      </div>  
+    </main> 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      menu = document.getElementById('menu')
+      drawer = document.getElementById('drawer')
+      menu.addEventListener("click", function(e){
+          drawer.classList.toggle('open');
+          e.stopPropagation();
+      })
+    </script>
   </body>
 </html>

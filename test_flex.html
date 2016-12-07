@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Students | List</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style type="text/css">
+      html, body, main {
+        height: 100%;
+        width: 100%;
+      }  
+      nav {
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+      }
+      nav.open {
+        transform: translate(0, 0);
+      }
+      .light_blue {
+        background-color: cyan;
+      }
+      .dark_blue {
+        background-color: blue;
+      }
+      @media screen and (min-width: 600px) {
+        nav {
+            position: relative;
+            transform: translate(0, 0);
+        }
+        body {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        main {
+            width: auto;
+            flex-grow: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="drawer" class="dark_blue">
+        <h2>Off Canvas</h2>
+        <p>Click outside the drawer to close.</p>
+    </nav>
+
+    <main class="light_blue" id="exitan">
+        <div>
+            <i class="fa fa-bars" id="menu"></i>
+        </div>
+        <p>Click on the menu icon to open the drawer</p>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        menu = document.getElementById('menu')
+        drawer = document.getElementById('drawer')
+        menu.addEventListener("click", function(e){
+            drawer.classList.toggle('open');
+            e.stopPropagation();
+        })
+
+        light = document.getElementById("exitan")
+        light.addEventListener("click", function(e){
+            drawer.classList.toggle('open');
+            e.stopPropagation();
+        })
+    </script>
+  </body>
+</html>
